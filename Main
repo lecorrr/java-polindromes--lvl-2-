@@ -1,0 +1,24 @@
+package javapolindrome;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("input 6 numbers");
+		int n = sc.nextInt();
+		int a = n / 100000;
+		int aa = n % 10;
+		int b = (n / 10000) % 10;
+		int bb = (n % 100) / 10;
+		int c = (n / 1000) % 10;
+		int cc = (n % 1000) / 100;
+		if (a == aa && b == bb && c == cc) {
+			System.out.println("your number is a polindrome");
+		} else {
+			System.out.println("your number is not a polindrome");
+		}
+	}
+
+}
